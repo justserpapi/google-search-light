@@ -44,11 +44,9 @@ pip install justserpapi
 
 ```python
 from justserpapi import Client
-from justserpapi.api.google_api_api import GoogleAPIApi
 
 with Client(api_key="YOUR_API_KEY") as client:
-    google_api = GoogleAPIApi(client.api_client)
-    response = google_api.search_light(
+    response = client.google.search.light(
         query="coffee shops in New York",
         location="New York, NY",
         language="en",
